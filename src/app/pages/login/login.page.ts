@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { NavController } from 'ionic-angular';
 
 import { AngularFireAuth } from '@angular/fire/auth';
+
 import * as firebase from 'firebase/app';
 
 import { auth } from 'firebase/app';
@@ -16,25 +17,25 @@ import {switchMap} from 'rxjs/operators';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  styleUrls: ['./login.page.scss']
 })
 export class LoginPage implements OnInit {
-
   constructor(
+
     private afAuth: AngularFireAuth,
     public usuarioProv: UsuarioService,
     private navCtrl: NavController,
     private afs: AngularFirestore
-  ) { 
-   }
+  ) {}
 
 
   signInWithFacebook() {
       this.afAuth.auth
       .signInWithPopup(new firebase.auth.FacebookAuthProvider())
-      .then(res => {console.log(res);
+      .then(res => {
+        console.log(res);
 
-        let user = res.user;
+        const user = res.user;
 
           this.usuarioProv.cargarUsuario(
             user.displayName,
@@ -72,6 +73,8 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
+  ngOnInit() {}
 }

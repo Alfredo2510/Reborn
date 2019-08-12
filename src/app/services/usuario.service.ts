@@ -10,13 +10,14 @@ export class UsuarioService {
 
   constructor() { }
 
-  cargarUsuario(  
+  cargarUsuario(
     nombre: string,
     email: string,
     imagen: string,
     uid: string,
-    provider: string
-  ){
+
+    provider: string) {
+
 
       this.usuario.nombre = nombre;
       this.usuario.email = email;
@@ -24,7 +25,7 @@ export class UsuarioService {
       this.usuario.uid = uid;
       this.usuario.provider = provider;
     }
-        
+
 }
 
 export interface Credenciales {
