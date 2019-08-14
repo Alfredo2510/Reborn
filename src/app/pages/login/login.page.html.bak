@@ -35,12 +35,10 @@
           <ion-icon name="logo-facebook"></ion-icon>
           Facebook
         </ion-button>
-        <p>
-          <a color="" routerLink="/register" icon-left block> 
+
+        <a color="" routerLink="/register" icon-left block> 
           registrarte 
         </a>
-        </p>
-        
 
     </ion-col>
   </ion-row>
