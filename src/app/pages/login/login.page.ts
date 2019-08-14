@@ -23,11 +23,16 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./login.page.scss']
 })
 export class LoginPage implements OnInit {
+
+  username: string = ""
+	password: string = ""
+
   constructor(
     private afAuth: AngularFireAuth,
     public usuarioProv: UsuarioService,
     private navCtrl: NavController,
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    public alert: AlertController
   ) {}
 
   signInWithFacebook() {
@@ -50,7 +55,7 @@ export class LoginPage implements OnInit {
         this.afs
           .doc(`user/${res.user.uid}`)
           .set(JSON.parse(JSON.stringify(Datauser)));
-        this.navCtrl.navigateRoot('/rol');
+        this.navCtrl.navigateRoot('/home');
       });
   }
 
@@ -74,9 +79,35 @@ export class LoginPage implements OnInit {
         this.afs
           .doc(`user/${res.user.uid}`)
           .set(JSON.parse(JSON.stringify(Datauser)));
-        this.navCtrl.navigateRoot('/rol');
+        this.navCtrl.navigateRoot('/home');
       });
   }
+
+  async login() {
+		const { username, password } = this
+		try {
+				const res = await this.afAuth.auth.signInWithEmailAndPassword(username , password)
+				this.showAlert("Success!", "¡Bienvenido/a!")
+				this.navCtrl.navigateRoot('/rol');
+		} catch(err) {
+			console.dir(err)
+
+			if(err.code === "auth/user-not-found"){
+				// console.log("El usuario no existe")
+				// this.showAlert("Error", err.message)
+			}
+			this.showAlert("Error", err.message)
+		}
+  }
+  
+  async showAlert(header: string, message: string) {
+		const alert = await this.alert.create({
+		  header,
+		  message,
+		  buttons: ["OK"]
+		})
+		await alert.present()
+	  }
 
   ngOnInit() {}
 }

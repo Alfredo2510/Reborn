@@ -14,6 +14,18 @@
   <ion-row>
     <ion-col>
 
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" [(ngModel)]="username"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+
+          <ion-button fill="solid" expand="block" (click)="login()">LOGIN</ion-button>
+
         <ion-button color="" icon-left block (click)="signInWithGoogle()"> 
           <ion-icon name="logo-google"></ion-icon>
           Google
@@ -23,10 +35,12 @@
           <ion-icon name="logo-facebook"></ion-icon>
           Facebook
         </ion-button>
-
-        <a color="" routerLink="/register" icon-left block> 
+        <p>
+          <a color="" routerLink="/register" icon-left block> 
           registrarte 
         </a>
+        </p>
+        
 
     </ion-col>
   </ion-row>
