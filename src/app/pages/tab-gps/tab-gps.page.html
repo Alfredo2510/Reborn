@@ -1,11 +1,13 @@
 <app-header titulo="Geolocalización"> </app-header>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSpxPAxEuNp6zjb4C6_t3539oUdP_14xg"></script>
 
 <ion-content>
-    
+
     <ion-item>
         <ion-label position="floating">Destination</ion-label>
         <ion-input type="text" [(ngModel)]="destination.text"></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit" (click)="calculateAndDisplayRoute(destination)">Get Direction</ion-button>
-    <div style="height: 100%;" #mapElement class="map"></div>
+    <ion-button id="destino" expand="full" type="submit" (click)="calculateAndDisplayRoute(destination)">Get Direction
+    </ion-button>
+    <div style="height: 100%;" #mapElement id="map"></div>
 </ion-content>
