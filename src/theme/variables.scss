@@ -70,8 +70,60 @@
   /** light **/
   --ion-color-light: #f4f5f8;
   --ion-color-light-rgb: 244, 244, 244;
-  --ion-color-light-contrast: #000000;
-  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-contrast: #ffffff;
+  --ion-color-light-contrast-rgb: 255, 255, 255;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+  /** hh **/
+  --ion-color-hh: #a3dff9;
+  --ion-color-hh-rgb: 163, 233, 249; 
+  --ion-color-hh-contrast: #ffffff;
+  --ion-color-hh-contrast-rgb: 255, 255, 255;
+  --ion-color-hh-shade: #81c6e4;
+  --ion-color-hh-tint: #61abca;;
+
+  /** hhKing **/
+  --ion-color-hhKing: #0578fa;
+  --ion-color-hhKing-rgb: 5, 120, 250; 
+  --ion-color-hhKing-contrast: #ffffff;
+  --ion-color-hhKing-contrast-rgb: 255, 255, 255;
+  --ion-color-hhKing-shade: #1475e4;
+  --ion-color-hhKing-tint: #1c78e2;
+
+    /** black **/
+    --ion-color-black: #000000;
+    --ion-color-black-rgb: 0, 0, 0; 
+    --ion-color-black-contrast: #ffffff;
+    --ion-color-black-contrast-rgb: 255, 255, 255;
+    --ion-color-black-shade: #0d0d0e;
+    --ion-color-black-tint: #0e0f0f;
+}
+
+.ion-color-hh{
+  --ion-color-base:var(--ion-color-hh) !important;
+  --ion-color-base-rgb:var(--ion-color-hh-rgb) !important;
+  --ion-color-contrast:var(--ion-color-hh-contrast) !important;
+  --ion-color-contrast-rgb:var(--ion-color-hh-contrast-rgb) !important;
+  --ion-color-shade:var(--ion-color-hh-shade) !important;
+  --ion-color-tint:var(--ion-color-hh-tint) !important;
+}
+
+.ion-color-hhKing{
+  --ion-color-base:var(--ion-color-hhKing) !important;
+  --ion-color-base-rgb:var(--ion-color-hhKing-rgb) !important;
+  --ion-color-contrast:var(--ion-color-hhKing-contrast) !important;
+  --ion-color-contrast-rgb:var(--ion-color-hhKing-contrast-rgb) !important;
+  --ion-color-shade:var(--ion-color-hhKing-shade) !important;
+  --ion-color-tint:var(--ion-color-hhKing-tint) !important;
+}
+
+.ion-color-black{
+  --ion-color-base:var(--ion-color-black) !important;
+  --ion-color-base-rgb:var(--ion-color-black-rgb) !important;
+  --ion-color-contrast:var(--ion-color-black-contrast) !important;
+  --ion-color-contrast-rgb:var(--ion-color-black-contrast-rgb) !important;
+  --ion-color-shade:var(--ion-color-black-shade) !important;
+  --ion-color-tint:var(--ion-color-black-tint) !important;
 }

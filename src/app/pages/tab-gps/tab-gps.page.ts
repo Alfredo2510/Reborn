@@ -1,4 +1,4 @@
-import { Platform } from "@ionic/angular";
+import { Platform, ToastController } from "@ionic/angular";
 import {
   AfterViewInit,
   Component,
@@ -51,7 +51,8 @@ export class TabGpsPage implements OnInit {
     private geolocation: Geolocation,
     public platform: Platform,
     public androidPermissions: AndroidPermissions,
-    public locationAccuracy: LocationAccuracy
+    public locationAccuracy: LocationAccuracy,
+    public toastController: ToastController
   ) {}
 
   ngOnInit() {
@@ -75,6 +76,7 @@ export class TabGpsPage implements OnInit {
           alert(err);
         }
       );
+      this.getPosition();
   }
 
   requestGPSPermission() {
@@ -153,7 +155,7 @@ export class TabGpsPage implements OnInit {
     };
     this.map.setCenter(this.myLatLng);
   }
-  calculateAndDisplayRoute(destination): void {
+  calculateAndDisplayRoute(): void {
     var t = this;
     this.directionsService.route(
       {
@@ -170,4 +172,16 @@ export class TabGpsPage implements OnInit {
       }
     );
   }
+
+  getCree(){
+    this.destination.text = 'Predio Canoas, ISSSTE, Predio Canoas, 34079 Durango, Dgo.';
+    this.calculateAndDisplayRoute();
+  }
+
+  getConade(){
+    this.destination.text = 'Av. Heroico Colegio Militar S/N, Centro, 34000 Durango, Dgo.';
+    this.calculateAndDisplayRoute();
+  }
+
+
 }

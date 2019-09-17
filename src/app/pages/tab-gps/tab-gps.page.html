@@ -8,9 +8,28 @@
         <ion-label position="floating">Destination</ion-label>
         <ion-input type="text" [(ngModel)]="destination.text"></ion-input>
     </ion-item>
-    <ion-button id="destino" expand="full" type="submit" (click)="calculateAndDisplayRoute(destination)">Get
+   <ion-button id="destino" expand="full" type="submit" (click)="calculateAndDisplayRoute(destination)">Get
         Direction
-    </ion-button>
-    <ion-button expand="full" type="submit" (click)="getPosition()">Position</ion-button>
-    <div style="height: 100%;" #mapElement id="map"></div>
+    </ion-button> 
+
+
+    <!-- <ion-button expand="full" type="submit" (click)="getPosition()">Position</ion-button> -->
+
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="arrow-dropup"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list id="list-fab" side="top">
+            <section>
+                <ion-button expand="block" (click)="getCree()">CREE</ion-button>
+                <ion-button expand="block" (click)="getConade()">CONADE</ion-button>            
+            </section>
+          
+            <!-- <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button> -->
+        </ion-fab-list>
+    </ion-fab>
+
+    <div  #mapElement id="map"></div>
+    <hr>
+    <hr>
 </ion-content>

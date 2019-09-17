@@ -1,47 +1,49 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content padding text-center>
-  <ion-row>
-    <ion-col>
-      <img src="./assets/imgs/logoReborn.png">
-    </ion-col>
-  </ion-row>
+	<ion-row id="logoHH" >
+		<ion-col>
+			<img src="./assets/imgs/HHlogo.png">
+		</ion-col>
+	</ion-row>
 
   <ion-row>
-    <ion-col>
+    	<ion-col>
+			<ion-col>
+				<ion-item class="btn-userpassword" color="hh">      
+					<ion-icon color="black" slot="start" name="contact"></ion-icon> 
+					<ion-input type="text" [(ngModel)]="username" placeholder="Nombre de Usuario" color="black"></ion-input>
+				</ion-item>
+			
+				<ion-item class="btn-userpassword" color="hh">
+					<ion-icon color="black" slot="start" name="lock"></ion-icon> 
+					<ion-input type="password" [(ngModel)]="password" placeholder="Contraseña" color="black"></ion-input>
+				</ion-item> 
+			</ion-col>
+			<ion-button color="hhKing" fill="solid" expand="block" (click)="login()">Ingresar</ion-button>
 
-          <ion-item>
-            <ion-label position="floating">Usuario</ion-label>
-            <ion-input type="text" [(ngModel)]="username"></ion-input>
-          </ion-item>
-      
-          <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" [(ngModel)]="password"></ion-input>
-          </ion-item>
+			<p id="p-oInicia">o inicia con:</p>
 
-          <ion-button fill="solid" expand="block" (click)="login()">LOGIN</ion-button>
+			<ion-button class="social-btn" color="light" icon-left block (click)="signInWithGoogle()"> 
+				<img src="https://img.icons8.com/color/48/000000/google-logo.png">
+			</ion-button>
 
-        <ion-button color="" icon-left block (click)="signInWithGoogle()"> 
-          <ion-icon name="logo-google"></ion-icon>
-          Google
-        </ion-button>
+			<ion-button class="social-btn" color="light"  icon-left block (click)="signInWithFacebook()"> 
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+					width="48" height="48"
+					viewBox="0 0 172 172"
+					style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3b5998"><path d="M103.91667,10.75c-19.79075,0 -35.83333,16.04258 -35.83333,35.83333v17.91667h-21.5v28.66667h21.5v68.08333h28.66667v-68.08333h25.08333l3.58333,-28.66667h-28.66667v-14.33333c0,-7.91558 6.41775,-14.33333 14.33333,-14.33333h14.33333v-23.9295c-6.84058,-0.70592 -14.61642,-1.16817 -21.5,-1.15383z"></path></g></g></svg>
+			</ion-button>
 
-        <ion-button color="" icon-left block (click)="signInWithFacebook()"> 
-          <ion-icon name="logo-facebook"></ion-icon>
-          Facebook
-        </ion-button>
-        <p>
-          <a color="" routerLink="/register" icon-left block> 
-          registrarte 
-        </a>
-        </p>
+			<ion-col>
+				<ion-button color="hhKing" fill="outline" expand="block" routerLink="/register">Registrarte</ion-button>
+			</ion-col>
+			
         
-
-    </ion-col>
-  </ion-row>
+    	</ion-col> 
+  	</ion-row>
 </ion-content>

@@ -1,12 +1,12 @@
 <ion-menu side="start" menuId="firstMenu" contentId="mainRouter" >
     <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menu</ion-title>
+      <ion-toolbar mode="ios" color="hhKing">
+        <ion-title>Menú</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
-      <ion-list>
-          <ion-item [routerLink]="c.url" *ngFor="let c of appPage">
+    <ion-content color="hhKing">
+      <ion-list id="listHH" color="hhKing">
+          <ion-item color="hhKing" [routerLink]="c.url" *ngFor="let c of appPage">
               <ion-icon [name]=c.icono slot="start"></ion-icon>
               <ion-label>
                 {{c.titulo}}

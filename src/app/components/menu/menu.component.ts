@@ -9,29 +9,35 @@ export class MenuComponent implements OnInit {
 
   public appPage = [
     {
+
       titulo: 'Inicio',
-      url: '',
+      url: 'home',
       icono: 'home'
     },
     {
-      titulo: 'Terapias',
-      url: 'tab-terapias',
-      icono: 'hand'
-    },
-    {
-      titulo: 'Graficas',
-      url: 'tab-graficas',
-      icono: 'stats'
-    },
-    {
-      titulo: 'Perfil Especialista',
+      titulo: 'Doctores',
       url: 'perfil-medico',
-      icono: 'hand'
+      icono: 'md-heart'
     },
     {
-      titulo: 'Ubicación',
-      url: 'tab-gps',
-      icono: 'pin'
+      titulo: 'Contácto',
+      url: '#',
+      icono: 'md-information-circle'
+    },
+    {
+      titulo: 'Ayuda',
+      url: 'tab-graficas',
+      icono: 'md-help-circle'
+    },
+    {
+      titulo: 'Promoción',
+      url: '#',
+      icono: 'md-pricetag'
+    },
+    {
+      titulo: 'Políticas de Privacidad',
+      url: '#',
+      icono: 'md-document'
     }
   ];
   constructor() { }
