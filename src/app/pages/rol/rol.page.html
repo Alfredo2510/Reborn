@@ -1,33 +1,53 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>Rol</ion-title>
+    <ion-toolbar   color="hh">
+      <ion-title id="titleHH">¿Cuál es tu nivel de lesión?</ion-title>
       <ion-buttons slot="start">
-        <ion-back-button class="backButton" text="" defaultHref="home"></ion-back-button>
+        <ion-back-button class="backButton" text="" defaultHref="login"></ion-back-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-<ion-content text-center>
-  <ion-list text-center>
-    <ion-item text-center>
-      <img [src]="user.imagen">
-    </ion-item>
-    <ion-item>
-      <h2>{{ user.nombre }}</h2>
-    </ion-item>
-    <ion-item>
-      <p>{{user.email}}</p>
-    </ion-item>
-    <ion-item>
-        <p>{{user.uid}}</p>
-    </ion-item>
-    <ion-item>
-        <p>{{user.provider}}</p>
-    </ion-item>
+<ion-content color="hh" text-center>
+  
+    <ion-radio-group color="hhKing">
 
-    <ion-item>
-      <ion-button (click)="salir()">Cerrar Sesión</ion-button>
-    </ion-item>
+      <ion-card color="hhKing" class="hhCard">
+        <ion-radio color="light" class="hhRadio" value="aguda" checked></ion-radio>
+        <ion-item color="hhKing">
+          <ion-label class="hhLabel">Aguda</ion-label>
+        </ion-item>
+        <ion-item color="hhKing">
+          <p>Aguda kaskaks</p>
+        </ion-item>
+      </ion-card>
 
-  </ion-list>
+      <ion-card color="hhKing" class="hhCard">
+        <ion-radio color="light" class="hhRadio" value="subAguda" checked></ion-radio>
+        <ion-item color="hhKing">
+          <ion-label class="hhLabel">Sub Aguda</ion-label>
+        </ion-item>
+        <ion-item color="hhKing">
+          <p>Sub Aguda asasas</p>
+        </ion-item>
+      </ion-card>
+
+      <ion-card color="hhKing" class="hhCard">
+        <ion-radio color="light" class="hhRadio" value="cronica" checked></ion-radio>
+        <ion-item color="hhKing">
+          <ion-label class="hhLabel">Crónica</ion-label>
+        </ion-item>
+        <ion-item color="hhKing">
+          <p>Cronica jajajaj</p>
+        </ion-item>
+      </ion-card>
+     
+    </ion-radio-group>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="hh">
+    <section>
+      <ion-button id="btnHH" expand="block">Siguiente</ion-button>
+    </section>
+  </ion-toolbar>
+</ion-footer>

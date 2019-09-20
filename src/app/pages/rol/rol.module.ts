@@ -23,4 +23,7 @@ const routes: Routes = [
   ],
   declarations: [RolPage]
 })
-export class RolPageModule {}
+export class RolPageModule {
+
+  
+}

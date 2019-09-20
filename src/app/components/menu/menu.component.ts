@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
     },
     {
       titulo: 'Ayuda',
-      url: 'tab-graficas',
+      url: '#',
       icono: 'md-help-circle'
     },
     {
