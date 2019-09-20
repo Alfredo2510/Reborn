@@ -90,7 +90,7 @@ export class LoginPage implements OnInit {
         password
       );
       this.showAlert("Success!", "Bienvenido/a!");
-      this.navCtrl.navigateRoot("/home");
+      this.navCtrl.navigateRoot("/rol");
     } catch (err) {
       console.dir(err);
 

@@ -13,26 +13,8 @@ export class RolPage implements OnInit {
 
   user: Credenciales = {};
 
-  constructor(public usuarioProv: UsuarioService,
-              private afAuth: AngularFireAuth,
-              public navCtrl: NavController
+  constructor(
             ) {
-
-    console.log(this.usuarioProv.usuario);
-
-    this.user = this.usuarioProv.usuario;
-
-    this.afAuth.authState.subscribe(user => {
-      console.log('AFAUTH' + JSON.stringify(user));
-    });
-
-   }
-
-   salir(){
-     this.afAuth.auth.signOut().then(res => {
-       this.usuarioProv.usuario = {};
-       this.navCtrl.navigateRoot('/login');
-     });
    }
 
   ngOnInit() {
